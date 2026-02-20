@@ -1,0 +1,1 @@
+# W4_PA1_InnerJoins1_SCOTTT.docx.
