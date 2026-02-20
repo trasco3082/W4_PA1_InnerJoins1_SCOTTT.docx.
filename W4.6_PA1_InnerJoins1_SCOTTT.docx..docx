@@ -1,0 +1,71 @@
+TRACEY SCOTT
+SQL250
+ASSIGNMENT 4.6
+02/19/2026
+
+--QUERY 1
+
+ 
+SELECT t1.word AS table1_word,
+       t2.word AS table2_word
+FROM table1 t1
+FULL OUTER JOIN table2 t2
+ON SUBSTR(t1.word,1,1) = SUBSTR(t2.word,1,1)
+ORDER BY t1.word, t2.word;
+
+--QUERRY 2
+
+ 
+SELECT t1.word AS table1_value,
+       t2.word AS table2_value 
+FROM table1 t1 
+JOIN table2 t2 
+    ON SUBSTR(t1.word, 1, 1) = SUBSTR(t2.word, 1, 1) 
+ORDER BY table1_value, table2_value;
+
+
+--QUERY3
+
+ 
+SELECT t1.word AS table1_word,
+t2.word AS table2_word
+FROM table1 t1
+JOIN table2 t2
+ON SUBSTR(t1.word,1,1) = SUBSTR(t2.word,1,1)
+WHERE SUBSTR(t1.word,1,1) = 'D';
+
+--QUERY4
+
+ 
+SELECT t1.word AS table1_word, 
+       t2.word AS table2_word 
+FROM table1 t1
+JOIN table2 t2 
+  ON SUBSTR(t1.word,1,1) = SUBSTR(t2.word,1,1) 
+WHERE SUBSTR(t1.word,1,1) = 'C' 
+ORDER BY table1_word, table2_word;
+
+--QUERY5
+
+ 
+SELECT t1.word AS table1_word,
+t2.word AS table2_word
+FROM table1 t1
+INNER JOIN table2 t2
+ON SUBSTR(t1.word,1,1) = SUBSTR(t2.word,1,1);
+
+--QUERY6
+
+ 
+SELECT t1.word AS table1_word,
+t2.word AS table2_word
+FROM table1 t1, table2 t2
+WHERE SUBSTR(t1.word,1,1) = SUBSTR(t2.word,1,1)
+ORDER BY t1.word;
+
+
+
+
+
+
+
